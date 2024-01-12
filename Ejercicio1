@@ -1,0 +1,35 @@
+Ejercicio 1
+git config --global user.name sergivk21
+git config --global user.email sergivk1@hotmail.com
+git config --global color.ui auto
+git config --global --list
+
+Ejercicio 2
+mkdir libro
+cd libro
+git init
+dir
+
+Ejercicio 3
+git status
+echo "Capítulo 1: Introducción a Git" > indice.txt
+echo "Capítulo 2: Flujo de trabajo básico" >> indice.txt
+echo "Capítulo 3: Repositorios remotos" >> indice.txt
+git status
+git add indice.txt
+git status
+
+Ejercicio 4
+git commit -m "Añadido índice del libro."
+
+Ejercicio 5
+notepad indice.txt
+En el bloc de notas realizo los cambios manualmente
+git status
+git add indice.txt
+git commit -m "Actualizado contenido de indice.txt"
+
+Ejercicio 6
+git diff HEAD^ HEAD
+git commit --amend -m "Añadido capítulo 3 sobre gestión de ramas al índice."
+git log
