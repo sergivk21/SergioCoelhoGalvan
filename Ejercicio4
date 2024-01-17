@@ -1,0 +1,30 @@
+EJERCICIO 4
+Ejercicio1
+1 curl -u 'tu-usuario' https://api.github.com/user/repos -d '{"name":"libro-git"}'
+
+2 cd ruta/al/libro
+git remote add origin https://github.com/tu-usuario/libro-git.git
+
+3 git remote -v
+
+Ejercicio2
+1 git add .
+git commit -m "Tu mensaje de commit"
+git push -u origin master
+
+Ejercicio3
+1 git clone https://github.com/usuario-otro/libro-git.git
+2 cd libro-git
+3 echo "Nombre del Usuario <correo@ejemplo.com>" > autores.txt
+4 git add autores.txt
+5 git commit -m "Añadido autor"
+6 git push origin master
+
+Ejercicio4
+2 git clone https://github.com/tu-usuario/libro-git.git
+cd libro-git
+3 git checkout -b autoria
+4 echo "Nombre del Usuario <correo@ejemplo.com>" > autores.txt
+5 git add autores.txt
+6 git commit -m "Añadido nuevo autor"
+7 git push -u origin autoria
