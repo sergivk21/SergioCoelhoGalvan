@@ -1,1 +1,73 @@
-E
+Ejercicio 1
+git branch bibliografia
+git checkout bibliografia
+git switch bibliografia
+git branch -av
+ 
+Ejercicio 2
+git checkout bibliografia
+echo "Texto del capítulo 4" > capitulos/capitulo4.txt
+notepad capitulos/capitulo4.txt
+git add capitulos/capitulo4.txt
+git commit -m "Añadir capítulo 4"
+git add capitulos/capitulo4.txt
+git commit -m "Añadido capítulo 4."
+git log --oneline
+ 
+Ejercicio 3
+git checkout bibliografia
+echo "Chacon, S. and Straub, B. Pro Git. Apress." > bibliografia.txt
+git add bibliografia.txt
+git commit -m "Añadir referencia de Pro Git a bibliografia.txt"
+git add archivo1.txt archivo2.txt
+git commit -m "Añadir referencia de Pro Git a bibliografia.txt"
+git commit -m "Añadida primera referencia bibliográfica."
+git log --all --graph --oneline --decorate
+ 
+Ejercicio 4
+git checkout master
+git merge bibliografia
+git commit -m "Merge bibliografia into master"
+git branch -d bibliografia
+git log --oneline --decorate
+git branch -d bibliografia
+git branch -D bibliografia
+git log --oneline
+ 
+Ejercicio 5
+ 
+git branch bibliografia
+git checkout bibliografia
+git switch -c bibliografia
+git checkout bibliografia
+git switch bibliografia
+echo "Scott Chacon and Ben Straub. Pro Git. Apress." > bibliografia.txt
+echo "Ryan Hodson. Ry’s Git Tutorial. Smashwords (2014)" >> bibliografia.txt
+git add bibliografia.txt
+git commit -m "Actualizar referencias en bibliografia.txt"
+git add bibliografia.txt
+git commit -m "Añadida nueva referencia bibliográfica."
+git checkout master
+git switch master
+echo "Chacon, S. and Straub, B. Pro Git. Apress." > bibliografia.txt
+echo "Loeliger, J. and McCullough, M. Version control with Git. O’Reilly." >> bibliografia.txt
+git add bibliografia.txt
+git commit -m "Actualizar referencias en bibliografia.txt"
+git checkout master
+git add bibliografia.txt
+git commit -m "Añadida nueva referencia bibliográfica."
+git checkout master
+git merge bibliografia
+git commit -m "Resolución de conflictos después de la fusión"
+git branch -d bibliografia
+Chacon, S. and Straub, B. Pro Git. Apress.
+Loeliger, J. and McCullough, M. Version control with Git. O’Reilly.
+<<<<<<< HEAD
+Referencia actual en master
+=======
+Referencia en la rama bibliografia
+>>>>>>> bibliografia
+Hodson, R. Ry’s Git Tutorial. Smashwords (2014)
+git add bibliografia.txt
+git commit -m "Resuelto conflicto en bibliografia.txt"
+git log --all --graph --oneline --decorate
