@@ -1,0 +1,41 @@
+EJERCICIO 5
+
+Ejercicio1
+1 notepad indice.txt
+2 git status
+3 git checkout -- indice.txt
+4 git status
+
+Ejercicio2
+1 notepad indice.txt
+2 git add indice.txt
+3 git status
+4 git restore --staged indice.txt
+5 git status
+6 git checkout -- indice.txt
+7 git status
+
+Ejercicio3
+1 notepad indice.txt
+2 del capitulos\capitulo3.txt
+3 echo. > capitulos\capitulo4.txt
+4 git add indice.txt capitulos/capitulo4.txt
+5 git status
+6 git restore --staged indice.txt capitulos/capitulo4.txt
+7 git status
+8 git restore indice.txt capitulos/capitulo4.txt
+9 git status
+
+Ejercicio 4
+1 notepad indice.txt
+2 del capitulos\capitulo3.txt
+3 git add indice.txt capitulos/capitulo3.txt
+  git commit -m "Borrado accidental."
+4 git log
+5 git reset --soft HEAD~1
+6 git log
+  git status
+7 git commit -c ORIG_HEAD
+8 git reset --hard HEAD~1
+9 git log
+  git status
